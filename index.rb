@@ -1,12 +1,12 @@
 require 'pp'
 require 'active_record'
 require 'kaminari'
-require 'jsonapi_compliable'
+require './z'
 require './seeds'
 
-class ApplicationResource < JsonapiCompliable::Resource
+class ApplicationResource < Z::Resource
   self.abstract_class = true
-  self.adapter = JsonapiCompliable::Adapters::ActiveRecord::Base.new
+  self.adapter = Z::Adapters::ActiveRecord::Base.new
 end
 
 class EmployeeResource < ApplicationResource
