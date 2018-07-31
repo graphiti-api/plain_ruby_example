@@ -1,12 +1,12 @@
 require 'pp'
 require 'active_record'
 require 'kaminari'
-require './z'
+require 'graphiti-rb'
 require './seeds'
 
-class ApplicationResource < Z::Resource
+class ApplicationResource < Graphiti::Resource
   self.abstract_class = true
-  self.adapter = Z::Adapters::ActiveRecord::Base.new
+  self.adapter = Graphiti::Adapters::ActiveRecord::Base.new
 end
 
 class EmployeeResource < ApplicationResource
