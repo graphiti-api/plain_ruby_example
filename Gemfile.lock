@@ -43,18 +43,19 @@ GEM
       dry-inflector (~> 0.1, >= 0.1.2)
       dry-logic (~> 0.4, >= 0.4.2)
     erubi (1.7.1)
-    graphiti-rb (1.0.alpha.1)
+    graphiti (1.0.alpha.24)
+      activesupport (>= 4.1, < 6)
       concurrent-ruby (~> 1.0)
       dry-types (~> 0.13)
+      graphiti_errors (~> 1.0.alpha.2)
       jsonapi-serializable (~> 0.3.0)
-      jsonapi_errorable (~> 0.9)
+    graphiti_errors (1.0.alpha.2)
+      jsonapi-serializable (~> 0.1)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     jsonapi-renderer (0.2.0)
     jsonapi-serializable (0.3.0)
       jsonapi-renderer (~> 0.2.0)
-    jsonapi_errorable (0.9.2)
-      jsonapi-serializable (~> 0.1)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.1.1)
@@ -89,7 +90,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
-  graphiti-rb
+  graphiti
   kaminari
   sqlite3
 

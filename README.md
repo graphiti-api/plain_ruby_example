@@ -1,5 +1,8 @@
-Graphiti - Simple .rb Usage
+Graphiti - Plain .rb Usage
 ===========================
+
+[Graphiti](https://github.com/graphiti-api/graphiti) with nothing but a
+`.rb` file.
 
 Running:
 

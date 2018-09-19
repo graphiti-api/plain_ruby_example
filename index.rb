@@ -1,12 +1,13 @@
 require 'pp'
 require 'active_record'
 require 'kaminari'
-require 'graphiti-rb'
+require 'graphiti'
 require './seeds'
 
 class ApplicationResource < Graphiti::Resource
   self.abstract_class = true
-  self.adapter = Graphiti::Adapters::ActiveRecord::Base.new
+  self.adapter = Graphiti::Adapters::ActiveRecord
+  self.autolink = false
 end
 
 class EmployeeResource < ApplicationResource
@@ -28,6 +29,8 @@ end
 class DepartmentResource < ApplicationResource
   attribute :name, :string
 end
+
+Graphiti.setup!
 
 employees = EmployeeResource.all({
   sort: '-id',
